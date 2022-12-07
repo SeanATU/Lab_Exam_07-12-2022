@@ -1,6 +1,9 @@
 package ie.atu;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,26 +31,35 @@ class EmployeeTest {
 
     @Test
     public void testEmploymentTypeFullTime(){
-        assertEquals("Full-time",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class()->{myEmployee.getEmployment_Type();});
+        assertEquals("Full-time",myEmployee.getEmployment_Type());
     }
+    @Test
     public void testEmploymentTypePartTime(){
-        assertEquals("Part-time",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class ()->{myEmployee.getEmployment_Type();});
+        assertEquals("Part-time",myEmployee.getEmployment_Type());
     }
+    @Test
     public void testEmploymentTypeContract(){
-        assertEquals("Contract",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class()->{myEmployee.getEmployment_Type();});
+        assertEquals("Contract",myEmployee.getEmployment_Type());
     }
 
     @Test
     public void testGenderMan(){
-        assertEquals("Man",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class()->{myEmployee.getGender();});
+        assertEquals("Man",myEmployee.getGender());
     }
     @Test
     public void testGenderWoman(){
-        assertEquals("Woman",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class()->{myEmployee.getGender();});
+        assertEquals("Woman",myEmployee.getGender());
     }
     @Test
     public void testGenderNon_Binary(){
-        assertEquals("Non-Binary",myEmployee.getName());
+        Exception exMessage = assertThrows(IllegalArgumentException.class()->{myEmployee.getGender();});
+        assertEquals("Non-Binary",myEmployee.getGender());
+
     }
 
     @Test

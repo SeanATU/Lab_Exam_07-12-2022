@@ -1,0 +1,5 @@
+FROM openjdk.17
+COPY target/classes/  /temp
+WORKDIR /tmp
+CMD java ie.atu.Employee
+
